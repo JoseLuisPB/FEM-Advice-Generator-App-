@@ -1,0 +1,111 @@
+// WIDTH
+
+$mobileWidth: 375px;
+$desktopWidth: 1440px;
+
+// COLORS
+
+$lightCyan: hsl(193, 38%, 86%);
+$neonGreen: hsl(150, 100%, 66%);
+$grayishBlue: hsl(217, 19%, 38%);
+$darkGrayishBlue: hsl(217, 19%, 24%);
+$darkBlue: hsl(218, 23%, 16%);
+
+// TYPOGRAPHY
+$fontFamily: 'Manrope', sans-serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: {
+        family: $fontFamily;
+        size: 28px;
+        weight: 800;
+    }
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: $darkBlue;
+    color: $lightCyan;
+}
+
+main{
+    width: 34vw;
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: $neonGreen;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    top: -1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    box-shadow :0 0 30px hsl(150deg 100% 66%);
+    transition: 0.25s;
+}
+
+picture{
+    margin-top: 1.5rem;
+}
+
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.adviceLayout{
+    background-color: $darkGrayishBlue;
+    padding: 2rem 2rem 3rem;
+    border-radius: 1rem;
+}
+
+.advice-number{
+    color: $neonGreen;
+    font: {
+        size: 15px;
+        weight: 400;
+    }
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.center-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 480px) {
+    body{
+        width: $mobileWidth;
+        overflow-y: scroll;
+    }
+
+    main{
+        width: 90vw;
+    }
+}
